@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | LUXE ATTIRE</title>
+  <meta name="description" content="Review and manage your shopping cart at LUXE ATTIRE. Secure checkout, multiple payment options, and free shipping on orders over $100.">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="header-left">
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li><a href="../index.html" class="nav-link">Home</a></li>
+              <li class="has-submenu">
+                <a href="products.html" class="nav-link">Shop</a>
+                <ul class="submenu">
+                  <li><a href="products.html" class="submenu-link">All Products</a></li>
+                  <li><a href="products.html" class="submenu-link">Women</a></li>
+                  <li><a href="products.html" class="submenu-link">Men</a></li>
+                  <li><a href="products.html" class="submenu-link">Accessories</a></li>
+                  <li><a href="products.html" class="submenu-link">Sale</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html" class="nav-link">About</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="logo">
+          <a href="../index.html">LUXE ATTIRE</a>
+        </div>
+
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-btn">
+              <div class="search-icon"></div>
+            </button>
+          </div>
+          <div class="header-actions">
+            <a href="account.html" class="icon-link account-icon" title="My Account"></a>
+            <a href="wishlist.html" class="icon-link wishlist-icon" title="Wishlist"></a>
+            <a href="cart.html" class="icon-link cart-icon" title="Cart">
+              <span class="cart-count">2</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <div class="container">
+        <ul class="breadcrumb-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><span>Cart</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="cart-section">
+      <div class="container">
+        <h1 class="page-title">Shopping Cart</h1>
+        
+        <div class="cart-container">
+          <div class="cart-items">
+            <div class="cart-header">
+              <div class="product-col">Product</div>
+              <div class="price-col">Price</div>
+              <div class="quantity-col">Quantity</div>
+              <div class="subtotal-col">Subtotal</div>
+              <div class="remove-col"></div>
+            </div>
+            
+            <div class="cart-item">
+              <div class="product-col">
+                <div class="product-image">
+                  <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Denim Jeans">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-name">Premium Denim Jeans</h3>
+                  <div class="product-variant">Size: M / Color: Dark Blue</div>
+                </div>
+              </div>
+              <div class="price-col">
+                <div class="product-price">$89.00</div>
+                <div class="original-price">$120.00</div>
+              </div>
+              <div class="quantity-col">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus">−</button>
+                  <input type="number" value="1" min="1" max="10" class="quantity-input">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+              <div class="subtotal-col">$89.00</div>
+              <div class="remove-col">
+                <button class="remove-btn">×</button>
+              </div>
+            </div>
+            
+            <div class="cart-item">
+              <div class="product-col">
+                <div class="product-image">
+                  <img src="https://images.pexels.com/photos/1018911/pexels-photo-1018911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Leather Crossbody Bag">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-name">Leather Crossbody Bag</h3>
+                  <div class="product-variant">Color: Brown</div>
+                </div>
+              </div>
+              <div class="price-col">
+                <div class="product-price">$129.00</div>
+              </div>
+              <div class="quantity-col">
+                <div class="quantity-selector">
+                  <button class="quantity-btn minus">−</button>
+                  <input type="number" value="1" min="1" max="10" class="quantity-input">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+              <div class="subtotal-col">$129.00</div>
+              <div class="remove-col">
+                <button class="remove-btn">×</button>
+              </div>
+            </div>
+            
+            <div class="cart-actions">
+              <div class="coupon-form">
+                <input type="text" placeholder="Coupon code" class="coupon-input">
+                <button class="btn btn-secondary">Apply Coupon</button>
+              </div>
+              <button class="btn btn-secondary">Update Cart</button>
+            </div>
+          </div>
+          
+          <div class="cart-sidebar">
+            <div class="cart-summary">
+              <h2 class="summary-title">Order Summary</h2>
+              
+              <div class="summary-row">
+                <span class="summary-label">Subtotal</span>
+                <span class="summary-value">$218.00</span>
+              </div>
+              
+              <div class="summary-row">
+                <span class="summary-label">Shipping</span>
+                <span class="summary-value">Free</span>
+              </div>
+              
+              <div class="summary-row discount">
+                <span class="summary-label">Discount</span>
+                <span class="summary-value">−$31.00</span>
+              </div>
+              
+              <div class="summary-total">
+                <span class="summary-label">Total</span>
+                <span class="summary-value">$187.00</span>
+              </div>
+              
+              <div class="checkout-button">
+                <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+              </div>
+              
+              <div class="continue-shopping">
+                <a href="products.html">Continue Shopping</a>
+              </div>
+            </div>
+            
+            <div class="shipping-notice">
+              <p><strong>Free shipping</strong> on all orders over $100</p>
+              <p><strong>Easy returns</strong> within 30 days</p>
+            </div>
+            
+            <div class="payment-methods">
+              <div class="payment-method-label">We Accept</div>
+              <div class="payment-icons">
+                <span class="payment-icon visa"></span>
+                <span class="payment-icon mastercard"></span>
+                <span class="payment-icon amex"></span>
+                <span class="payment-icon paypal"></span>
+                <span class="payment-icon apple-pay"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="related-products">
+          <h2 class="section-title">You May Also Like</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.pexels.com/photos/1270015/pexels-photo-1270015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wool Blend Coat">
+                <div class="product-actions">
+                  <button class="action-btn wishlist-btn" title="Add to Wishlist"></button>
+                  <button class="action-btn quickview-btn" title="Quick View"></button>
+                  <button class="action-btn add-to-cart-btn" title="Add to Cart"></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Wool Blend Coat</h3>
+                <p class="product-price">$249.00</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-badge sale">Sale</div>
+              <div class="product-img">
+                <img src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Silk Scarf">
+                <div class="product-actions">
+                  <button class="action-btn wishlist-btn" title="Add to Wishlist"></button>
+                  <button class="action-btn quickview-btn" title="Quick View"></button>
+                  <button class="action-btn add-to-cart-btn" title="Add to Cart"></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Silk Scarf</h3>
+                <p class="product-price"><span class="original-price">$89.00</span> $79.00</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.pexels.com/photos/1895019/pexels-photo-1895019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Linen Blend Shirt">
+                <div class="product-actions">
+                  <button class="action-btn wishlist-btn" title="Add to Wishlist"></button>
+                  <button class="action-btn quickview-btn" title="Quick View"></button>
+                  <button class="action-btn add-to-cart-btn" title="Add to Cart"></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Linen Blend Shirt</h3>
+                <p class="product-price">$79.00</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.pexels.com/photos/1056553/pexels-photo-1056553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Leather Wallet">
+                <div class="product-actions">
+                  <button class="action-btn wishlist-btn" title="Add to Wishlist"></button>
+                  <button class="action-btn quickview-btn" title="Quick View"></button>
+                  <button class="action-btn add-to-cart-btn" title="Add to Cart"></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Leather Wallet</h3>
+                <p class="product-price">$69.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4 class="footer-title">LUXE ATTIRE</h4>
+          <p class="footer-text">Elevating everyday style with premium quality clothing and accessories for the modern individual.</p>
+          <div class="social-links">
+            <a href="#" class="social-link instagram"></a>
+            <a href="#" class="social-link facebook"></a>
+            <a href="#" class="social-link twitter"></a>
+            <a href="#" class="social-link pinterest"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">New Arrivals</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Accessories</a></li>
+            <li><a href="products.html">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Help</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping Information</a></li>
+            <li><a href="returns.html">Returns & Exchanges</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="size-guide.html">Size Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">About</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 LUXE ATTIRE. All rights reserved.</p>
+        <div class="payment-methods">
+          <span class="payment-icon visa"></span>
+          <span class="payment-icon mastercard"></span>
+          <span class="payment-icon amex"></span>
+          <span class="payment-icon paypal"></span>
+          <span class="payment-icon apple-pay"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

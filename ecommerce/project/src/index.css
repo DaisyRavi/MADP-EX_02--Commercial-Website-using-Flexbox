@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply text-neutral-900 bg-neutral-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded inline-flex items-center justify-center font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-neutral-900 text-white hover:bg-neutral-800 active:bg-neutral-950;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-neutral-900 border border-neutral-200 hover:bg-neutral-50 active:bg-neutral-100;
+  }
+  
+  .btn-accent {
+    @apply bg-amber-600 text-white hover:bg-amber-700 active:bg-amber-800;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-neutral-200 rounded bg-white focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Product card hover effect */
+.product-card-img {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.05);
+}
+
+/* Cart slide animation */
+.cart-slide-enter {
+  transform: translateX(100%);
+}
+
+.cart-slide-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.cart-slide-exit {
+  transform: translateX(0);
+}
+
+.cart-slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
